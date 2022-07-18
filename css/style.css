@@ -10,10 +10,12 @@
   border: 1px solid #333;
   margin: 0 auto;
   position: relative;
+  overflow: hidden;
 }
 
 .pipe {
   position: absolute;
   bottom: 0;
   width: 80px;
+  right: 0;
 }
