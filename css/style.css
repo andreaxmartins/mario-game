@@ -17,5 +17,14 @@
   position: absolute;
   bottom: 0;
   width: 80px;
-  right: 0;
+}
+
+@keyframes pipe-animation {
+  from {
+    right: 0;
+  }
+
+  to {
+    right: 100%;
+  }
 }
