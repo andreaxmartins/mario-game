@@ -5,12 +5,13 @@
 }
 
 .game-board {
-  width: 80%;
+  width: 100%;
   height: 500px;
-  border: 1px solid #333;
+  border-BOTTOM: 15px solid green;
   margin: 0 auto;
   position: relative;
   overflow: hidden;
+  background: linear-gradient(#87CEEB, #E0F6FF)
 }
 
 .pipe {
