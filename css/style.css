@@ -30,6 +30,16 @@
   animation: jump 500ms ease-out;
 }
 
+@keyframes pipe-animation {
+  from {
+    right: -80px;
+  }
+
+  to {
+    right: 100%;
+  }
+}
+
 @keyframes jump {
   0% {
     bottom: 0;
@@ -48,15 +58,5 @@
 
   100% {
     bottom: 0px;
-  }
-}
-
-@keyframes pipe-animation {
-  from {
-    right: -80px;
-  }
-
-  to {
-    right: 100%;
   }
 }
