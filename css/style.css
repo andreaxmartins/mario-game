@@ -17,11 +17,12 @@
   position: absolute;
   bottom: 0;
   width: 80px;
+  animation: pipe-animation 2s infinite linear;
 }
 
 @keyframes pipe-animation {
   from {
-    right: 0;
+    right: -80px;
   }
 
   to {
