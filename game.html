@@ -12,13 +12,23 @@
 </head>
 
 <body>
-  <div class="game-board">
-    <img src="./images/clouds.png" alt="Clouds" class="clouds">
-    <img src="./images/mario.gif" alt="Mario character" class="mario">
-    <img src="./images/pipe.png" alt="Green pipe" class="pipe">
-  </div>
-  <div class="floor">
-  </div>
+  <main class="game">
+    <div class="game-board">
+      <img src="./images/clouds.png" alt="Clouds" class="clouds">
+      <img src="./images/mario.gif" alt="Mario character" class="mario">
+      <img src="./images/pipe.png" alt="Green pipe" class="pipe">
+    </div>
+    <div class="floor">
+    </div>
+    <div id="game-over">
+      <div class="text">
+        <h2>Game Over</h2>
+      </div>
+      <div class="button">
+        <a href="javascript:delay('./game.html')"><button id="start-button">Start</button></a>
+      </div>
+    </div>
+  </main>
 </body>
 
 <script src="./js/script.js" defer></script>

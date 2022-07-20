@@ -4,6 +4,18 @@
   box-sizing: border-box;
 }
 
+h2 {
+  font-family: 'VT323', monospace;
+  font-size: 6em;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.game {
+  position: relative;
+}
+
 .start-screen {
   display: flex;
   flex-direction: column;
@@ -71,6 +83,20 @@
   position: absolute;
   width: 550px;
   animation: clouds-animation 5s infinite linear;
+}
+
+#game-over {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  position: absolute;
+  display: none;
+  background: #000000;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
 }
 
 @keyframes pipe-animation {

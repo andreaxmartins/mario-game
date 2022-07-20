@@ -18,6 +18,10 @@ const jumpSound = () => {
 const gameOverSound = () => {
   const audio = new Audio("./sounds/game-over.wav");
   audio.play();
+  audio.addEventListener("ended", () => {
+    const gameOver = document.getElementById("game-over");
+    gameOver.style.display = "flex";
+  });
 }
 
 const loop = setInterval(() => {
@@ -45,6 +49,7 @@ const loop = setInterval(() => {
     gameOverSound();
 
     clearInterval(loop);
+
   }
 
 }, 10);
