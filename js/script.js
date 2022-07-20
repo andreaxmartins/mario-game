@@ -1,5 +1,6 @@
-const mario = document.querySelector(".mario");
 const pipe = document.querySelector(".pipe");
+const mario = document.querySelector(".mario");
+const clouds = document.querySelector(".clouds")
 
 const jump = () => {
   mario.classList.add("jump");
@@ -17,11 +18,13 @@ const jumpSound = () => {
 const gameOverSound = () => {
   const audio = new Audio("./sounds/game-over.wav");
   audio.play();
+  console.log(audio.duration);
 }
 
 const loop = setInterval(() => {
 
   const pipePosition = pipe.offsetLeft;
+  const cloudsPosition = clouds.offsetLeft;
   const marioPosition = +window.getComputedStyle(mario).bottom.replace("px", "");
   document.addEventListener("keydown", jumpSound);
 
@@ -36,6 +39,10 @@ const loop = setInterval(() => {
     mario.src = "./images/game-over.png";
     mario.style.width = "75px";
     mario.style.marginLeft = "50px";
+
+    clouds.style.animation = "none";
+    clouds.style.left = `${cloudsPosition}px`;
+
     gameOverSound();
 
     clearInterval(loop);
@@ -44,4 +51,3 @@ const loop = setInterval(() => {
 }, 10);
 
 document.addEventListener("keydown", jump);
-// document.addEventListener("keydown", jumpSound);

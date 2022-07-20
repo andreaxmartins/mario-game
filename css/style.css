@@ -34,7 +34,7 @@
 .clouds {
   position: absolute;
   width: 550px;
-  animation: clouds-animation 10s infinite linear;
+  animation: clouds-animation 5s infinite linear;
 }
 
 @keyframes pipe-animation {
