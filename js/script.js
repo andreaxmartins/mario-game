@@ -9,6 +9,16 @@ const jump = () => {
   }, 500);
 }
 
+const jumpSound = () => {
+  const audio = new Audio("./sounds/jump.wav");
+  audio.play();
+}
+
+const gameOverSound = () => {
+  const audio = new Audio("./sounds/game-over.wav");
+  audio.play();
+}
+
 const loop = setInterval(() => {
 
   const pipePosition = pipe.offsetLeft;
@@ -24,6 +34,7 @@ const loop = setInterval(() => {
     mario.src = "./images/game-over.png";
     mario.style.width = "75px";
     mario.style.marginLeft = "50px";
+    gameOverSound();
 
     clearInterval(loop);
   }
@@ -31,3 +42,4 @@ const loop = setInterval(() => {
 }, 10);
 
 document.addEventListener("keydown", jump)
+document.addEventListener("keydown", jumpSound)
