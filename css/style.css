@@ -6,7 +6,7 @@
 
 h2 {
   font-family: 'VT323', monospace;
-  font-size: 6em;
+  font-size: 4em;
   color: #FFFFFF;
   text-transform: uppercase;
   text-align: center;
@@ -31,7 +31,7 @@ h2 {
 
 .start-button {
   font-family: 'VT323', monospace;
-  font-size: 3em;
+  font-size: 2em;
   text-transform: uppercase;
   background-color: #FFFFFF;
   border: 4px solid #000000;
@@ -85,7 +85,7 @@ h2 {
   animation: clouds-animation 5s infinite linear;
 }
 
-#game-over {
+.game-over {
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -97,6 +97,23 @@ h2 {
   left: 0;
   height: 100%;
   width: 100%;
+}
+
+#retry {
+  font-family: 'VT323', monospace;
+  font-size: 2em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  background-color: #000000;
+  border: 4px solid #FFFFFF;
+  border-radius: 3px;
+  padding: 3px 10px;
+}
+
+#retry:hover, #retry:focus  {
+  background-color: #09adff;
+  border-color: #09adff;
+  color: #000000;
 }
 
 @keyframes pipe-animation {

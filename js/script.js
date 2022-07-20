@@ -15,17 +15,19 @@ const jumpSound = () => {
   audio.play();
 }
 
-const gameOverSound = () => {
+const gameOver = () => {
   const audio = new Audio("./sounds/game-over.wav");
   audio.play();
   audio.addEventListener("ended", () => {
-    const gameOver = document.getElementById("game-over");
+    const gameOver = document.querySelector(".game-over");
     gameOver.style.display = "flex";
+  });
+  document.getElementById("retry").addEventListener("click", () => {
+    document.location.reload(true);
   });
 }
 
 const loop = setInterval(() => {
-
   const pipePosition = pipe.offsetLeft;
   const cloudsPosition = clouds.offsetLeft;
   const marioPosition = +window.getComputedStyle(mario).bottom.replace("px", "");
@@ -46,10 +48,9 @@ const loop = setInterval(() => {
     clouds.style.animation = "none";
     clouds.style.left = `${cloudsPosition}px`;
 
-    gameOverSound();
+    gameOver();
 
     clearInterval(loop);
-
   }
 
 }, 10);
