@@ -6,12 +6,19 @@
 
 .game-board {
   width: 100%;
-  height: 500px;
-  border-BOTTOM: 15px solid green;
+  height: 80vh;
   margin: 0 auto;
   position: relative;
   overflow: hidden;
-  background: linear-gradient(#63f4e3, #b7f9f1)
+  background: linear-gradient(#09adff, #66c6f6);
+  border-bottom: 3px solid #004d06;
+}
+
+.floor {
+  height: 20vh;
+  background-image: url("../images/grass.png");
+  background-repeat: repeat;
+  background-size: 300px;
 }
 
 .pipe {
