@@ -5,7 +5,7 @@ const startSound = () => {
 
 const delay = URL => {
   setTimeout(() => {
-    const startButton = document.getElementById("start-button");
+    const startButton = document.querySelector(".start-button");
     startButton.innerText="READY";
   }, 700);
 

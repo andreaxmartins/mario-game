@@ -29,7 +29,7 @@ h2 {
   background: linear-gradient(#09adff, #66c6f6);
 }
 
-#start-button {
+.start-button {
   font-family: 'VT323', monospace;
   font-size: 3em;
   text-transform: uppercase;
@@ -39,7 +39,7 @@ h2 {
   padding: 3px 10px;
 }
 
-#start-button:hover, #start-button:focus  {
+.start-button:hover, #start-button:focus  {
   background-color: #000000;
   color: #FFFFFF;
 }
