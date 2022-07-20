@@ -23,10 +23,12 @@ const loop = setInterval(() => {
 
   const pipePosition = pipe.offsetLeft;
   const marioPosition = +window.getComputedStyle(mario).bottom.replace("px", "");
+  document.addEventListener("keydown", jumpSound);
 
   if (pipePosition <= 120 && pipePosition > 0 && marioPosition < 100) {
     pipe.style.animation = "none";
     pipe.style.left = `${pipePosition}px`;
+    document.removeEventListener("keydown", jumpSound);
 
     mario.style.animation = "none";
     mario.style.bottom = `${marioPosition}px`;
@@ -41,5 +43,5 @@ const loop = setInterval(() => {
 
 }, 10);
 
-document.addEventListener("keydown", jump)
-document.addEventListener("keydown", jumpSound)
+document.addEventListener("keydown", jump);
+// document.addEventListener("keydown", jumpSound);
