@@ -18,7 +18,6 @@ const jumpSound = () => {
 const gameOverSound = () => {
   const audio = new Audio("./sounds/game-over.wav");
   audio.play();
-  console.log(audio.duration);
 }
 
 const loop = setInterval(() => {
