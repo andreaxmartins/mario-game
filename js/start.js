@@ -5,8 +5,13 @@ const startSound = () => {
 
 const delay = URL => {
   setTimeout(() => {
+    const startButton = document.getElementById("start-button");
+    startButton.innerText="READY";
+  }, 700);
+
+  setTimeout(() => {
     window.location = URL
-  }, 1000);
+  }, 800);
 }
 
 document.querySelector(".button").addEventListener("click", startSound);
